@@ -8,7 +8,8 @@ library("reshape")
 # Activity 2_____________________________________________________________
 data <- read.csv("lab2.csv")
 tidydata <- data %>% 
-  gather("base_sport", "base_pain", "base_qol", "first_sport", "first_pain", "first_qol", "second_sport", 'second_qol', 'second_pain', key = "time_category", value = "score") %>%
+  gather("base_sport", "base_pain", "base_qol", "first_sport", "first_pain", "first_qol", 
+         "second_sport", 'second_qol', 'second_pain', key = "time_category", value = "score") %>%
   separate(time_category, into = c("time", "category")) %>%
   mutate(time = fct_recode(factor(time), "baseline" = "base", "one year" = "first", "two years" = "second"))
 
