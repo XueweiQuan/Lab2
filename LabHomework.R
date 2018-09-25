@@ -2,7 +2,6 @@ getwd()
 setwd("/Users/xueweiquan/Downloads")
 library("tidyverse")
 library("reshape")
-library("tidyverse")
 
 
 
